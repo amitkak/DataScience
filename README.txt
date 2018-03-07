@@ -11,3 +11,12 @@ git status
 Add -> Commit -> Push
 
 Later Pull 
+
+
+Start the command Prompt in Conda
+
+Move to Folders from Git
+cd C:\temp\mygit\DataScience\regression
+
+Run Prediction
+c:/ProgramData/Miniconda2/python svr.py

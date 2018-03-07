@@ -59,8 +59,8 @@ def get_mdata(symbol):
 #get_data('AVGO.csv') # calling get_data method by passing the csv file to it
 #prices = Reverse(get_mdata()) # calling get_data method by passing the csv file to it
 
-portfolio = ["CVS", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT"]
-#portfolio = [QCOM]
+#portfolio = ["CVS", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT"]
+portfolio = ["QCOM"]
 
 for stock in portfolio:
 	prices = get_mdata(stock)

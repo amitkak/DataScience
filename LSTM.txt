@@ -60,7 +60,7 @@ set MKL_THREADING_LAYER=GNU
 
 c:/ProgramData/Miniconda2/python predict.py
 
-
+c:/ProgramData/Miniconda2/python svr.py
 
 
 
@@ -136,20 +136,6 @@ with open("Filenamecsv",'r') as csvfile, NamedTemporaryFile(dir="path/parh",dele
 move(temp.name,"Filename.csv")
 
 
-
-
-The stock open price for 29th Feb is:
-RBF kernel: $ 67.23507090376587
-Linear kernel: $ 70.31750000009228
-Polynomial kernel: $ 72.58476192422303
-
-(base) C:\igir\bitbucket\tutorial\igir\predictio
-conda2/python svr.py
-
-The stock open price for 29th Feb is:
-RBF kernel: $ 67.22810828072274
-Linear kernel: $ 63.90499999997154
-Polynomial kernel: $ 61.06736107173907
 
 
 
