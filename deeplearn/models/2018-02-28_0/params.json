@@ -1,0 +1,1 @@
+{"optimizer": "adam", "num_hidden_layers": 3, "end_date": "2018-02-28 10:10:37.153000", "chunk": 5, "batch_size": 10, "symbols": ["QCOM", "AVGO", "AAPL"], "lstm_units": 100, "steps_per_checkpoint": 5, "save_coreml": false, "epochs": 10, "loss": "mean_squared_error", "max_data": 200, "model_type": "regression", "test_size": 0.2, "start_date": "2016-01-01"}
