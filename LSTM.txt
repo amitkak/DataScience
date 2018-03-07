@@ -1,0 +1,160 @@
+https://github.com/zaghlol94/Google-Maket-Stock-Prediction-using-RNN
+
+
+
+
+
+https://github.com/dhingratul/Stock-Price-Prediction/blob/master/src/timeSeriesPredict.py
+
+
+
+c:\Python27\Scripts\easy_install scikit-learn
+
+Installed c:\python27\lib\site-packages\scikit_learn-0.19.1-py2.7-win32.egg
+Processing dependencies for scikit-learn
+
+
+c:\Python27\Scripts\easy_install matplotlib
+c:\Python27\Scripts\easy_install scipy
+
+
+
+
+https://www.youtube.com/watch?v=oYbVFhK_olY&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=43
+
+
+
+https://conda.io/miniconda.html
+
+https://docs.anaconda.com/anaconda/user-guide/getting-started
+
+
+
+Kearas uses either TF or Theano at the backend
+
+
+conda create -n lstm anaconda python=2
+
+
+Create New Env in Conda and activate it
+
+conda create -n myenv python
+activate myenv
+
+Install Spyder in this environment
+
+conda install spyder
+conda install theano
+conda install tensorflow
+Move TF to GPU
+conda install -c conda-forge keras
+conda install matplotlib
+conda install pandas
+conda install scikit-learn
+
+
+cd C:\igir\bitbucket\tutorial\igir\prediction
+
+set MKL_THREADING_LAYER=GNU
+
+
+c:/ProgramData/Miniconda2/python predict.py
+
+
+
+
+
+https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
+
+
+https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/
+
+http://www.jakob-aungiers.com/articles/a/LSTM-Neural-Network-for-Time-Series-Prediction
+
+
+
+https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/
+
+
+
+
+
+Dan Van Boxel Video
+https://www.youtube.com/watch?v=6RdflAr66-E
+
+Code
+https://github.com/keras-team/keras/tree/master/examples
+
+
+
+deeplearn code
+https://github.com/noahchalifour/stocks-deep-learning
+
+
+conda install pandas-datareader
+conda install sklearn
+conda install h5py
+conda install coremltools
+
+
+Edit params.py to the desired settings
+Execute python train.py
+
+c:/ProgramData/Miniconda2/python train.py
+
+
+Run the Test
+python test_live -m <model_name> -c <checkpoint#>
+
+c:/ProgramData/Miniconda2/python test_live.py -m 2018-02-28_0 -c 10
+
+
+
+Download CVS
+https://query1.finance.yahoo.com/v7/finance/download/CVS?period1=1517727912&period2=1520147112&interval=1d&events=history&crumb=BpVhQD/lmDS
+
+
+
+https://stackoverflow.com/questions/44045643/in-python-how-to-change-date-format-in-a-csv
+
+
+import os 
+import csv 
+
+
+from datetime import datetime
+import sys
+from tempfile import NamedTemporaryFile
+
+with open("Filenamecsv",'r') as csvfile, NamedTemporaryFile(dir="path/parh",delete=False) as temp:
+    w = csv.writer(temp)
+    r = csv.reader(csvfile)
+    for row in r:
+        dt = row[2].split("-")
+        row[2] = "{}.{}.{}".format(row[-1],row[1],row[0])
+        w.writerow(row)
+move(temp.name,"Filename.csv")
+
+
+
+
+The stock open price for 29th Feb is:
+RBF kernel: $ 67.23507090376587
+Linear kernel: $ 70.31750000009228
+Polynomial kernel: $ 72.58476192422303
+
+(base) C:\igir\bitbucket\tutorial\igir\predictio
+conda2/python svr.py
+
+The stock open price for 29th Feb is:
+RBF kernel: $ 67.22810828072274
+Linear kernel: $ 63.90499999997154
+Polynomial kernel: $ 61.06736107173907
+
+
+
+
+
+
+
+
