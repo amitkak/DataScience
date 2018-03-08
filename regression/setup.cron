@@ -1,1 +1,2 @@
 17 11 * * *  /home/ec2-user/myaws/DataScience/regression/run.sh
+17 14 * * *  python /home/ec2-user/db.py
