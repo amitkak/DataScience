@@ -32,9 +32,12 @@ def predict_price(dates, prices, x):
 	#print svr_rbf.predict(x)
 	#print svr_lin.predict(x)
 	#print svr_poly.predict(x)
-	for i in x:
-		print(svr_rbf.predict(dates)[i])
-	return svr_rbf.predict(dates)[x], svr_lin.predict(dates)[x], svr_poly.predict(dates)[x]
+	#i = x
+	#while i > 0:
+	#	print(svr_rbf.predict(dates)[i])
+	#	i = i - 1
+
+	return svr_rbf.predict(dates)[x-1], svr_lin.predict(dates)[x-1], svr_poly.predict(dates)[x-1]
 
 
 def get_mdata(symbol):
@@ -44,7 +47,7 @@ def get_mdata(symbol):
 	#today = str(datetime.today().date())
 	yday = str(datetime.strftime(datetime.now() - timedelta(1), '%Y-%m-%d'))
 
-	df = DataReader(symbol, 'morningstar', '2018-02-02', yday)
+	df = DataReader(symbol, 'morningstar', '2018-03-02', yday)
 	#print today 
 	#print yday
 

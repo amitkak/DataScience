@@ -3,4 +3,4 @@ SHELL = /bin/bash
 
 17 1 * * *  /home/ec2-user/myaws/DataScience/regression/run.sh
 17 2 * * *  python /home/ec2-user/db.py
-20 10  * * *  python /home/ec2-user/myaws/GoogleAPI/gssValue.py > /home/ec2-user/fundamentals.txt
+17 3  * * *  python /home/ec2-user/myaws/GoogleAPI/gssValue.py > /home/ec2-user/fundamentals.txt
