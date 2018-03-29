@@ -32,6 +32,8 @@ def predict_price(dates, prices, x):
 	#print svr_rbf.predict(x)
 	#print svr_lin.predict(x)
 	#print svr_poly.predict(x)
+	for i in x:
+		print(svr_rbf.predict(dates)[i])
 	return svr_rbf.predict(dates)[x], svr_lin.predict(dates)[x], svr_poly.predict(dates)[x]
 
 
