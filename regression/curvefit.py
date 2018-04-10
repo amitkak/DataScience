@@ -64,22 +64,26 @@ def get_mdata(symbol):
 #get_data('AVGO.csv') # calling get_data method by passing the csv file to it
 #prices = Reverse(get_mdata()) # calling get_data method by passing the csv file to it
 
-#portfolio = ["CVS", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT"]
-portfolio = ["QCOM"]
+portfolio = ["CVS", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT"]
+#portfolio = ["QCOM"]
 
 for stock in portfolio:
 	prices = get_mdata(stock)
 	dates = np.arange(len(prices))
-	print dates
-	print prices
-	z = np.polyfit(dates, prices, 4)
+	#print (dates)
+	#print (prices)
+	z = np.polyfit(dates, prices, 3)
 	p = np.poly1d(z)
-	print p
+	#print (p(0.5))
+	#print (p(0.25))
+	#print (p(0.75))
+	#print (p(0.15))
 	#predicted_price = predict_price(dates, prices, len(prices)-1)
 	print("##############################")
 	print("##############################\n")
 	
-	#print("Total Predicted Price for {0} is".format(stock))
+	print("Total Predicted Price for {0} is".format(stock))
+	print (p(0.15))
 	#print ("The next stock price Open for ", stock)
 	#print ("RBF kernel %.2f" % (predicted_price[0]))
 	#print ("Linear kernel %.2f" % (predicted_price[1]))
@@ -106,5 +110,5 @@ for stock in portfolio:
 #y = np.array([231, 221, 225, 226, 221, 217])
 #z = np.polyfit(x, y, 3)
 #print z
-p = np.poly1d(z)
-print p(5)
+#p = np.poly1d(z)
+#print p(5)
