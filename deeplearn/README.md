@@ -14,3 +14,11 @@ This is a very simple project that is used to predict future prices of stocks (N
 4. Edit `params.py` to the desired settings
 5. Execute `python train.py`
 6. Test `python test_history -m <model_name> --start_date=<YYYY-MM-DD> --end_date=<YYYY-MM-DD>` OR `python test_live -m <model_name>`
+
+	e.g
+Open Mini Conda Shell
+set "KERAS_BACKEND=theano"
+set "MKL_THREADING_LAYER=GNU"
+Edit `params.py` to the desired symbols
+python train.py   (This will train the model)
+python test_live.py -m 2018-06-18_0 -c 10  (This will predict it. Make sure you have internet connectivity)
