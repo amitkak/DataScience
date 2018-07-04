@@ -1,0 +1,10 @@
+
+(base) c:\temp\mygit\DataScience\OpenCV>python findshapes.py --image "C:\Users\amitkak\Dropbox\watch2.png" 
+I found 71 Green Bullish Boxes
+I found 84 Red Bearish Boxes
+I found 13 Blue Undecided Boxes
+
+(base) c:\temp\mygit\DataScience\OpenCV>python findshapes.py --image "C:\Users\amitkak\Dropbox\2018-07-03-watchlist.png" 
+I found 68 Green Bullish Boxes
+I found 72 Red Bearish Boxes
+I found 16 Blue Undecided Boxes
