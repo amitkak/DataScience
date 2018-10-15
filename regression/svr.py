@@ -47,14 +47,14 @@ def get_mdata(symbol):
 	#today = str(datetime.today().date())
 	yday = str(datetime.strftime(datetime.now() - timedelta(1), '%Y-%m-%d'))
 
-	df = DataReader(symbol, 'morningstar', '2018-03-02', yday)
+	df = DataReader(symbol, 'iex', '2018-09-02', yday)
 	#print today 
 	#print yday
 
 	#print str(datetime.today().date())
 	#print datetime.datetime.now() - datetime.timedelta(days = 1)
 		#print df
-	adj_close = df['Close']
+	adj_close = df['close']
 	all_closes += list(adj_close)
 	#prices = all_closes
 	#print prices
@@ -64,8 +64,8 @@ def get_mdata(symbol):
 #get_data('AVGO.csv') # calling get_data method by passing the csv file to it
 #prices = Reverse(get_mdata()) # calling get_data method by passing the csv file to it
 
-portfolio = ["BABA", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT", "NVDA"]
-#portfolio = ["QCOM"]
+#portfolio = ["BABA", "QCOM", "AAPL", "AVGO" ,"AMZN", "GOOG", "FB", "WMT", "NVDA"]
+portfolio = ["QCOM"]
 
 for stock in portfolio:
 	prices = get_mdata(stock)
