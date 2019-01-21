@@ -3,11 +3,11 @@ from datetime import datetime
 params = {
     'symbols': [
         'QCOM', 
-        'AVGO',
-        'CVS', 
+        'AMZN',
+        'GOOG', 
         'AAPL'
     ],
-    'start_date': datetime(2016, 1, 1).date(),
+    'start_date': datetime(2018, 10, 10).date(),
     'end_date': datetime.today(),
     'chunk': 5,
     'num_hidden_layers': 3,
