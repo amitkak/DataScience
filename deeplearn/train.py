@@ -1,5 +1,5 @@
 from datetime import datetime
-from pandas_datareader import DataReader
+import pandas_datareader.data as web
 from pandas_datareader._utils import RemoteDataError
 from keras.models import Sequential
 from keras.layers import LSTM, Dense
@@ -34,13 +34,13 @@ def get_data():
 					print('skipping', symbol)
 					break
 				i += 1
-				df = DataReader(symbol, 'morningstar', start=params['start_date'], end=params['end_date'])
+				df = web.DataReader(symbol, 'iex', start=params['start_date'], end=params['end_date'])
 				#print df
 			except RemoteDataError:
 				print('get_data_error', symbol)
 				continue
 
-		adj_close = df['Close']
+		adj_close = df['close']
 		all_closes += list(adj_close)
 
 		for i in range(len(adj_close)):
