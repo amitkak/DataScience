@@ -22,3 +22,5 @@ set "MKL_THREADING_LAYER=GNU"
 Edit `params.py` to the desired symbols
 python train.py   (This will train the model)
 python test_live.py -m 2018-06-18_0 -c 10  (This will predict it. Make sure you have internet connectivity)
+Make sure you enter the ticker name as "QCOM"
+Make sure the data reader in train.py and test_live.py is iex. If you change in one then corresponding change is needed in the next one as well.
