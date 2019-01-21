@@ -1,5 +1,5 @@
 from keras.models import model_from_json
-from pandas_datareader import DataReader
+import pandas_datareader.data as web
 from pandas_datareader._utils import RemoteDataError
 from datetime import datetime
 import os
@@ -48,13 +48,13 @@ while stock_ticker != "":
             if i == 5:
                 raise Exception('Could not get data for', stock_ticker)
             i += 1
-            stock_data = DataReader(stock_ticker, 'morningstar', start=datetime(now.year - 1, now.month, now.day),
+            stock_data = web.DataReader(stock_ticker, 'iex', start=datetime(now.year - 1, now.month, now.day),
                                     end=datetime.today())
             #print stock_data;
         except RemoteDataError:
             continue
 
-    x = np.array(list(stock_data['Close'][len(stock_data['Close'])-params['chunk']:])).reshape(-1, 1)
+    x = np.array(list(stock_data['close'][len(stock_data['close'])-params['chunk']:])).reshape(-1, 1)
     x = scaler.transform(x)
 
     prediction = model.predict(np.array([x]))
